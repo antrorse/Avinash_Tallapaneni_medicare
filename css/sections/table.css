@@ -1,0 +1,19 @@
+.table_data {
+  padding: 0.5rem;
+}
+
+.table_row {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr 2.5fr;
+}
+
+th,
+td {
+  border: 1px solid var(--primary-color-3);
+  border-collapse: collapse;
+  padding-left: 0.25rem;
+  background-color: var(--secondary-color-1);
+}
+td {
+  font-size: 0.85rem;
+}

@@ -1,0 +1,183 @@
+.about_us {
+  background-color: var(--secondary-color-1);
+}
+
+.about_us_title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--primary-color-1);
+  margin: 0;
+}
+
+.about_us_motto {
+  font-size: 1.25rem;
+  font-style: italic;
+  margin: 0;
+}
+.about_us_description {
+  font-size: 0.85rem;
+  width: 75%;
+  margin-bottom: 0.75rem;
+}
+
+.about_us_promo {
+  height: 30vw;
+  width: 80%;
+  background: url("/assets/about_us-min.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+/* .about_us_detailed {
+  background-color: var(--primary-color-3);
+} */
+
+.leader,
+.story {
+  background-color: var(--secondary-color-1);
+}
+
+.leader {
+  border-right: 2px solid var(--primary-color-3);
+}
+.leader_title,
+.story_title {
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--primary-color-1);
+}
+
+.leader_motto,
+.story_motto {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-right: 0.5rem;
+}
+
+.story_description li::before {
+  content: url(/assets/stethoscope.svg);
+}
+
+ol {
+  padding: 0;
+}
+
+.pulse {
+  width: 5rem;
+  height: 5rem;
+  background-color: rgba(228, 241, 238, 1);
+  cursor: pointer;
+}
+
+.promo_button {
+  filter: invert(12%) sepia(96%) saturate(7498%) hue-rotate(203deg)
+    brightness(88%) contrast(99%);
+  opacity: 0.7;
+}
+
+.pulse::before,
+.pulse::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(228, 241, 238, 1);
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.pulse::before {
+  animation: pulse 2s ease-in-out infinite;
+}
+.pulse::after {
+  animation: pulse 2s 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  100% {
+    transform: scale(1.85);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .leader_motto,
+  .story_motto {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .about_us_title {
+    font-size: 2rem;
+  }
+  .about_us_motto {
+    font-size: 1rem;
+  }
+  .leader_title,
+  .story_title {
+    font-size: 1rem;
+  }
+
+  .leader_description,
+  .story_description {
+    font-size: 0.85rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  .about_us_title {
+    font-size: 1.5rem;
+  }
+  .about_us_motto {
+    font-size: 0.85rem;
+  }
+  .leader_title,
+  .story_title,
+  .leader_motto,
+  .story_motto {
+    font-size: 0.85rem;
+  }
+  .leader_description,
+  .story_description,
+  .about_us_description {
+    font-size: 0.65rem;
+  }
+  ol {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .services_provided {
+    grid-template-columns: repeat(2, 14.5rem);
+  }
+  .services_provided_icon {
+    width: 15px;
+    height: 15px;
+  }
+  .services_provided_name {
+    font-size: 0.75rem;
+  }
+
+  .services_motto{
+    font-size: 0.85rem !important;
+  }
+
+  .services_provided_description,
+  .services_provided_additional_info {
+    font-size: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .services_title {
+    font-size: 1.75rem;
+  }
+
+  .services_motto {
+    font-size: 0.75rem;
+  }
+  .services_provided {
+    grid-template-columns: repeat(1, 17rem);
+  }
+}

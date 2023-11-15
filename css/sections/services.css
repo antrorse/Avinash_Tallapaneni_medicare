@@ -1,0 +1,176 @@
+.services_title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--primary-color-1);
+  margin: 0;
+}
+
+.services_motto {
+  font-size: 1.25rem;
+}
+
+.services_provided > div {
+  background-color: var(--secondary-color-3);
+}
+
+.services_provided {
+  display: grid;
+  grid-template-columns: repeat(3, 20.5rem);
+  gap: 0.1rem;
+  background-color: rgba(20, 53, 82, 0.2);
+}
+
+.services_provided_icon {
+  width: 30px;
+  height: 30px;
+  filter: invert(63%) sepia(99%) saturate(1109%) hue-rotate(113deg)
+    brightness(102%) contrast(88%);
+}
+.services_provided_name {
+  width: fit-content;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color-3);
+  text-wrap: nowrap;
+}
+
+.services_provided_description {
+  /* font-size: 0.75rem; */
+  width: fit-content;
+
+  height: auto;
+}
+
+.services_provided_additional_info {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  width: fit-content;
+}
+.services_provided_additional_info {
+  position: relative;
+  cursor: pointer;
+
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--primary-color-1);
+}
+
+.services_provided_additional_info:hover > p {
+  color: var(--primary-color-2);
+}
+
+.services_provided_additional_info img {
+  filter: invert(20%) sepia(69%) saturate(2446%) hue-rotate(198deg)
+    brightness(99%) contrast(99%);
+  /* position: relative; */
+}
+.services_provided_additional_info:hover > div {
+  background-color: var(--primary-color-2);
+}
+
+.services_provided_additional_info > div {
+  width: 25px;
+  height: 25px;
+
+  background-color: var(--secondary-color-1);
+}
+
+@media screen and (max-width: 1200px) {
+  .services_provided_name {
+    font-size: 1rem;
+  }
+
+  .services_provided_description,
+  .services_provided_additional_info {
+    font-size: 0.75rem;
+  }
+
+  .services_provided_additional_info_icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .services_title {
+    font-size: 2rem;
+  }
+  .services_motto {
+    font-size: 1rem;
+  }
+  .services_provided {
+    grid-template-columns: repeat(2, 19.5rem);
+  }
+  .services_provided_icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .services_provided_name {
+    font-size: 1.25rem;
+  }
+
+  .services_provided_description,
+  .services_provided_additional_info {
+    font-size: 0.75rem;
+  }
+
+  .services_provided_additional_info_icon {
+    width: 10px;
+    height: 10px;
+  }
+  .services_provided_additional_info > div {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .services_title {
+    font-size: 1.5rem;
+  }
+
+  .services_motto {
+    font-size: 1rem;
+  }
+  .services_provided {
+    grid-template-columns: repeat(2, 17.5rem);
+  }
+  .services_provided_name {
+    font-size: 1.15rem;
+  }
+
+  .services_provided_description,
+  .services_provided_additional_info {
+    font-size: 0.65rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .services_provided {
+    grid-template-columns: repeat(2, 14.5rem);
+  }
+  .services_provided_icon {
+    width: 15px;
+    height: 15px;
+  }
+  .services_provided_name {
+    font-size: 0.75rem !important;
+  }
+
+  .services_provided_description,
+  .services_provided_additional_info {
+    font-size: 0.65rem !important;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .services_title {
+    font-size: 1.75rem;
+  }
+
+  .services_motto {
+    font-size: 0.75rem;
+  }
+  .services_provided {
+    grid-template-columns: repeat(1, 17rem);
+  }
+}

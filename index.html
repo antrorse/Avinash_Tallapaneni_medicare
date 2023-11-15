@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medicare+</title>
+
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="module" src="js/script.js"></script>
+  </head>
+  <body>
+    <!-- ============================================ -->
+    <!--                   Header                     -->
+    <!-- ============================================ -->
+
+    <header class="header d-flex flex-column sticky-top">
+      <!------- Topbar ------->
+
+      <div
+        class="header_topbar w-100 d-flex align-items-center justify-content-between flex-lg-row flex-md-column flex-sm-column"
+      >
+        <div class="header_topbar_tagline text-nowrap">
+          Welcome to <span class="fw-bolder">Medicare+</span> We provide medical
+          assitance
+        </div>
+
+        <!------- Emergency contact info ------->
+
+        <div class="header_topbar_contact_info d-flex gap-5">
+          <a
+            class="text-nowrap gap-2 d-flex align-items-center"
+            href="tel:123-456-7890"
+          >
+            <img
+              class="header_topbar_contact_info-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="/assets/telephone.svg"
+              alt="phone icon"
+              width="20"
+              height="20"
+            />
+            Tel: 123-456-7890
+          </a>
+
+          <a
+            class="text-nowrap gap-2 d-flex align-items-center"
+            href="mailto:medicareplus@gmail.com"
+          >
+            <img
+              class="header_topbar_contact_info-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="/assets/mail.svg"
+              alt="email icon"
+              width="20"
+              height="20"
+            />
+            medicareplus@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <nav
+        class="header__navbar gap-3 d-flex align-items-center justify-content-between position-relative"
+      >
+        <a class="header__navbar-brand fs-1" href="#">Medicare+</a>
+
+        <ul
+          class="header__menu d-flex align-items-center gap-3 text-nowrap d-md-none d-sm-none d-lg-flex m-0 flex-grow-1 justify-content-end"
+        >
+          <li>
+            <a class="slide_in_underline active" aria-current="page" href="#"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a class="slide_in_underline" href="#">About</a>
+          </li>
+          <li>
+            <a class="slide_in_underline" href="#">Doctors</a>
+          </li>
+          <li>
+            <a class="slide_in_underline" href="#">Services</a>
+          </li>
+          <li>
+            <a class="slide_in_underline" href="#">Contact Us</a>
+          </li>
+        </ul>
+
+        <!------- Appointment ------->
+
+        <div class="appointment p-2 px-4 rounded position-relative ms-auto">
+          Appointment
+        </div>
+        <ul class="header__menu-mobile-icon d-lg-none d-md-block my-auto">
+          <li>
+            <img
+              id="header__menu-mobile-icon"
+              src="assets/menu.svg"
+              alt="menu"
+              width="20"
+              height="20"
+            />
+          </li>
+        </ul>
+        <ul
+          class="header__menu-mobile d-lg-none d-sm-flex flex-sm-column align-items-end position-absolute gap-3 p-3"
+        >
+          <li>
+            <img
+              id="header__menu-mobile-icon"
+              src="assets/menu.svg"
+              alt="menu"
+              width="20"
+              height="20"
+            />
+          </li>
+          <li>
+            <a class="slide_in_underline active" aria-current="page" href="#"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a class="slide_in_underline" href="#">About</a>
+          </li>
+          <li>
+            <a class="slide_in_underline" href="#">Doctors</a>
+          </li>
+          <li>
+            <a class="slide_in_underline" href="#">Services</a>
+          </li>
+          <li>
+            <a class="slide_in_underline" href="#">Contact Us</a>
+          </li>
+
+          <!------- Mobile Appointment ------->
+
+          <div
+            class="menu_appointment p-2 px-4 rounded position-relative ms-auto"
+          >
+            Appointment
+          </div>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ============================================ -->
+    <!--                 Hero Section                 -->
+    <!-- ============================================ -->
+
+    <div
+      class="hero_section d-flex align-items-start overflow-x-hidden position-relative"
+    >
+      <!------- Hero section background ------->
+
+      <div
+        class="w-100 h-100 hero_section_banner position-absolute d-flex flex-column flex-grow-1"
+      ></div>
+
+      <!------- Hero section content ------->
+
+      <div
+        class="hero_content w-50 d-flex flex-column justify-content-between align-items-start"
+      >
+        <span class="fw-semibold text_info_color_bg p-2 rounded text-nowrap"
+          >Medical Professional</span
+        >
+        <p class="fw-semibold m-0 hero_content_motto">
+          We provide <span class="text_info_color">Medical</span> services that
+          you can
+          <span class="text_info_color">Trust!</span>
+        </p>
+        <div class="hero_content_motto_description d-flex my-auto">
+          <p class="my-1">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita
+            vitae ipsam porro id explicabo excepturi facere, libero odio
+          </p>
+        </div>
+        <div class="cta d-flex gap-4 p-3 ps-1 rounded">
+          <span
+            class="hero_appointment p-2 rounded text-nowrap position-relative"
+          >
+            Get Appointment
+          </span>
+          <span
+            class="hero_contact_us p-2 rounded text-nowrap position-relative"
+            >Contact Now</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!--                 Abous us Section             -->
+    <!-- ============================================ -->
+
+    <section
+      class="about_us d-flex flex-column align-items-center justify-content-between gap-2 p-lg-3 p-md-2 p-sm-1"
+    >
+      <p class="about_us_title text-nowrap">About us</p>
+      <p class="about_us_motto text-center">
+        Our team helps you get your life back on track
+      </p>
+      <p class="about_us_description text-center">
+        Our team of highly trained professionals uses the latest healing
+        technologies to restore you to pain-free health quickly and easily. We
+        thoroughly evaluate & treat all of the contributing root factors related
+        to your issue. Includes, but is not limit, your work and home stressors
+      </p>
+
+      <div class="about_us_promo w-75 mb-3 position-relative">
+        <div
+          class="pulse position-absolute top-50 start-50 translate-middle rounded-circle d-flex align-items-center justify-content-center"
+        >
+          <img
+            src="/assets/play-button.svg"
+            class="promo_button"
+            alt="promo_button"
+            width="40px"
+            height="40px"
+          />
+        </div>
+      </div>
+      <div
+        class="about_us_detailed w-75 d-flex align-items-start justify-content-between gap-2"
+      >
+        <div class="leader w-50 d-flex flex-column align-items-start gap-2">
+          <p class="leader_title text-nowrap">The Leaders</p>
+          <p class="leader_motto">We have the best Pharma & Medical</p>
+          <div class="leader_description d-flex flex-column gap-2">
+            <p>
+              Collaboratively administrate empowered markets via plug-and- play
+              networks. users after installed base benefits. Dramatically
+              visualize customer.
+            </p>
+
+            <p>
+              Completely synergize resource taxing relationships via premier
+              niche markets. Professionally cultivate one-to-one customer
+              service with robust ideas. Dynamically innovate.
+            </p>
+          </div>
+        </div>
+        <div class="story w-50 d-flex flex-column align-items-start gap-2">
+          <p class="story_title text-nowrap">Our Story</p>
+          <p class="story_motto">
+            Our mission is to help patients live better.
+          </p>
+          <div class="story_description d-flex flex-column gap-2">
+            <p>
+              Collaboratively administrate empowered markets via plug-and- play
+              networks. users after installed base benefits. Dramatically
+              visualize customer.
+            </p>
+
+            <ol>
+              <li class="d-flex align-items-center justify-content-start gap-2">
+                Over 400 leading hospitals and clinics.
+              </li>
+              <li class="d-flex align-items-center justify-content-start gap-2">
+                Trusted doctors across 20+ specialties.
+              </li>
+              <li class="d-flex align-items-center justify-content-start gap-2">
+                Award-winning practice management
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                 Services Section             -->
+    <!-- ============================================ -->
+
+    <section
+      class="services d-flex flex-column align-items-center justify-content-between p-lg-3 p-md-2 p-sm-1"
+    >
+      <p class="services_title">Services</p>
+      <p class="services_motto text-center">
+        Feels like Home with Best <br />
+        Medical Care
+      </p>
+
+      <div class="services_provided">
+        <div class="p-3 d-flex flex-column gap-2">
+          <div class="d-flex gap-2 align-items-center">
+            <img
+              src="/assets/clipboard-list.svg"
+              class="services_provided_icon"
+              alt=""
+              width="20px"
+              height="20px"
+            />
+            <div class="services_provided_name">General Treatment</div>
+          </div>
+          <div class="services_provided_description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis
+            quos similique error iure ad aliquam numquam dolore temporibus quas?
+            Sapiente voluptates error, vero fugit ea temporibus dolorem deserunt
+            sed sit!
+          </div>
+          <div
+            class="services_provided_additional_info d-flex align-items-center gap-2"
+          >
+            <p class="m-0">Learn More</p>
+            <div
+              class="d-flex align-items-center justify-content-center rounded-circle"
+            >
+              <img
+                src="/assets/plus.svg"
+                class="services_provided_additional_info_icon"
+                alt=""
+                width="20px"
+                height="20px"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="p-3 d-flex flex-column gap-2">
+          <div class="d-flex gap-2 align-items-center">
+            <img
+              src="/assets/eye.svg"
+              class="services_provided_icon"
+              alt=""
+              width="20px"
+              height="20px"
+            />
+            <div class="services_provided_name">Eye Vison</div>
+          </div>
+          <div class="services_provided_description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis
+            quos similique error iure ad aliquam numquam dolore temporibus quas?
+            Sapiente voluptates error, vero fugit ea temporibus dolorem deserunt
+            sed sit!
+          </div>
+          <div
+            class="services_provided_additional_info d-flex align-items-center gap-2"
+          >
+            <p class="m-0">Learn More</p>
+            <div
+              class="d-flex align-items-center justify-content-center rounded-circle"
+            >
+              <img
+                src="/assets/plus.svg"
+                class="services_provided_additional_info_icon"
+                alt=""
+                width="20px"
+                height="20px"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="p-3 d-flex flex-column gap-2">
+          <div class="d-flex gap-2 align-items-center">
+            <img
+              src="/assets/heart.svg"
+              class="services_provided_icon"
+              alt=""
+              width="20px"
+              height="20px"
+            />
+            <div class="services_provided_name">Cardiology</div>
+          </div>
+          <div class="services_provided_description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis
+            quos similique error iure ad aliquam numquam dolore temporibus quas?
+            Sapiente voluptates error, vero fugit ea temporibus dolorem deserunt
+            sed sit!
+          </div>
+          <div
+            class="services_provided_additional_info d-flex align-items-center gap-2"
+          >
+            <p class="m-0">Learn More</p>
+            <div
+              class="d-flex align-items-center justify-content-center rounded-circle"
+            >
+              <img
+                src="/assets/plus.svg"
+                class="services_provided_additional_info_icon"
+                alt=""
+                width="20px"
+                height="20px"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="p-3 d-flex flex-column gap-2">
+          <div class="d-flex gap-2 align-items-center">
+            <img
+              src="/assets/tooth.svg"
+              class="services_provided_icon"
+              alt=""
+              width="20px"
+              height="20px"
+            />
+            <div class="services_provided_name">Dental</div>
+          </div>
+          <div class="services_provided_description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis
+            quos similique error iure ad aliquam numquam dolore temporibus quas?
+            Sapiente voluptates error, vero fugit ea temporibus dolorem deserunt
+            sed sit!
+          </div>
+          <div
+            class="services_provided_additional_info d-flex align-items-center gap-2"
+          >
+            <p class="m-0">Learn More</p>
+            <div
+              class="d-flex align-items-center justify-content-center rounded-circle"
+            >
+              <img
+                src="/assets/plus.svg"
+                class="services_provided_additional_info_icon"
+                alt=""
+                width="20px"
+                height="20px"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="p-3 d-flex flex-column gap-2">
+          <div class="d-flex gap-2 align-items-center">
+            <img
+              src="/assets/nurse.svg"
+              class="services_provided_icon"
+              alt=""
+              width="20px"
+              height="20px"
+            />
+            <div class="services_provided_name">Elderly Care</div>
+          </div>
+          <div class="services_provided_description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis
+            quos similique error iure ad aliquam numquam dolore temporibus quas?
+            Sapiente voluptates error, vero fugit ea temporibus dolorem deserunt
+            sed sit!
+          </div>
+          <div
+            class="services_provided_additional_info d-flex align-items-center gap-2"
+          >
+            <p class="m-0">Learn More</p>
+            <div
+              class="d-flex align-items-center justify-content-center rounded-circle"
+            >
+              <img
+                src="/assets/plus.svg"
+                class="services_provided_additional_info_icon"
+                alt=""
+                width="20px"
+                height="20px"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="p-3 d-flex flex-column gap-2">
+          <div class="d-flex gap-2 align-items-center">
+            <img
+              src="/assets/hospital.svg"
+              class="services_provided_icon"
+              alt=""
+              width="20px"
+              height="20px"
+            />
+            <div class="services_provided_name">Emergency Response</div>
+          </div>
+          <div class="services_provided_description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis
+            quos similique error iure ad aliquam numquam dolore temporibus quas?
+            Sapiente voluptates error, vero fugit ea temporibus dolorem deserunt
+            sed sit!
+          </div>
+          <div
+            class="services_provided_additional_info d-flex align-items-center justify-content-center gap-2"
+          >
+            <p class="m-0">Learn More</p>
+            <div
+              class="d-flex align-items-center justify-content-center rounded-circle"
+            >
+              <img
+                src="/assets/plus.svg"
+                class="services_provided_additional_info_icon"
+                alt=""
+                width="20px"
+                height="20px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                 contact form                 -->
+    <!-- ============================================ -->
+
+    <div
+      class="contact_us_container w-100 mx-auto p-3 d-flex flex-column align-items-center justify-content-center"
+    >
+      <p class="contact_us_title text-nowrap">Contact us</p>
+      <p class="contact_us_message mb-2 text-center">
+        Get In Touch with Us!. <br />
+        Incase of <span class="contact_us_hightlight">Emergency</span> please
+        click on
+        <span class="contact_us_hightlight">Appointment</span>
+      </p>
+
+      <div class="contact_us_info w-75 d-flex flex-column text-center">
+        <div class="contact_us_info_banner pb-3">
+          <div
+            class="contact_us_address py-2 d-flex flex-column gap-2 justify-content-start"
+          >
+            <div
+              class="contact_us_icon d-flex align-items-center justify-content-center"
+            >
+              <img
+                src="/assets/location.svg"
+                width="30px"
+                height="30px"
+                alt=""
+              />
+            </div>
+            <p class="m-0">Address</p>
+            <p class="m-0">
+              123 Marina Drive <br />
+              IN 600000
+            </p>
+          </div>
+          <div
+            class="contact_us_phone py-2 d-flex flex-column gap-2 justify-content-start"
+          >
+            <div
+              class="contact_us_icon d-flex align-items-center justify-content-center"
+            >
+              <img
+                src="/assets/telephone.svg"
+                width="30px"
+                height="30px"
+                alt=""
+              />
+            </div>
+            <p class="m-0 text-nowrap">Call us</p>
+            <p class="m-0">
+              Tel: 123-456-7890 <br />
+              Tel: 987-654-3210
+            </p>
+          </div>
+          <div
+            class="contact_us_email py-2 d-flex flex-column gap-2 justify-content-start"
+          >
+            <div
+              class="contact_us_icon d-flex align-items-center justify-content-center"
+            >
+              <img src="/assets/mail.svg" width="30px" height="30px" alt="" />
+            </div>
+            <p class="m-0 text-nowrap">Email Us</p>
+            <p class="m-0">
+              careplus@medicareplus.com
+              <br />
+              medicareplus@gmail.com
+            </p>
+          </div>
+        </div>
+        <form action="/contact.html" method="GET" class="form p-3 rounded">
+          <!-- Name input -->
+          <div class="d-flex align-items-center gap-2 mb-4">
+            <img src="/assets/user.svg" alt="" width="20px" height="20px" />
+            <input
+              type="text"
+              id="form_name"
+              class="form-control"
+              name="name"
+              required
+              placeholder="Name"
+            />
+          </div>
+
+          <!-- Email input -->
+          <div class="d-flex align-items-center gap-2 mb-4">
+            <img src="/assets/mail.svg" alt="" width="20px" height="20px" />
+            <input
+              type="email"
+              id="form_email"
+              class="form-control"
+              name="email"
+              required
+              placeholder="abc@mail.com"
+            />
+          </div>
+
+          <!-- Message input -->
+          <div class="d-flex align-items-center gap-2 mb-4">
+            <img src="/assets/message.svg" alt="" width="20px" height="20px" />
+            <textarea
+              class="form-control"
+              name="message"
+
+              required
+              id="form_message"
+              rows="4"
+              placeholder="Write your Message here..."
+            ></textarea>
+          </div>
+
+          <!-- Checkbox -->
+          <div class="form-check d-flex justify-content-center mb-4">
+            <input
+              class="form-check-input me-2"
+              type="checkbox"
+              value=""
+              id="form_checkbox"
+              checked
+            />
+            <label class="form-check-label" for="form_checkbox">
+              Send me a copy of this message
+            </label>
+          </div>
+
+          <!-- Submit button -->
+          <div
+            class="submit d-flex justify-content-center align-items-center p-3"
+          >
+            <button
+              type="submit"
+              class="contact_us_button mx-auto p-2 rounded position-relative text-nowrap"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!--                   Footer                     -->
+    <!-- ============================================ -->
+
+    <footer>
+      <div class="footer w-75 mx-auto p-2">
+        <div class="footer_brand">
+          <p>Medicare+</p>
+          <p>
+            "A simple Story About THe Doctorate Medicdal Center & Health Care
+            Foundation."
+          </p>
+        </div>
+        <div class="footer_quick_links">
+          <p>Explore</p>
+          <ul class="footer_menu ps-sm-0">
+            <li>
+              <a class="slide_in_underline" aria-current="page" href="#"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a class="slide_in_underline" href="#">About</a>
+            </li>
+            <li>
+              <a class="slide_in_underline" href="#">Doctors</a>
+            </li>
+            <li>
+              <a class="slide_in_underline" href="#">Services</a>
+            </li>
+            <li>
+              <a class="slide_in_underline" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer_timing">
+          <p class="text-nowrap">Opening Hours</p>
+          <div class="ps-md-0">
+            <div class="d-flex justify-content-between gap-2">
+              <span class="text-nowrap">Monday - Friday</span>
+              <span class="text-nowrap">8:00 - 20:00</span>
+            </div>
+            <div class="d-flex justify-content-between gap-2">
+              <span class="text-nowrap">Monday - Friday</span>
+              <span class="text-nowrap">8:00 - 20:00</span>
+            </div>
+            <div class="d-flex justify-content-between gap-2">
+              <span class="text-nowrap">Monday - Friday</span>
+              <span class="text-nowrap">8:00 - 20:00</span>
+            </div>
+            <p class="m-0 d-flex align-items-center gap-2">
+              <img
+                src="/assets/telephone.svg"
+                width="15px"
+                height="15px"
+                alt=""
+              />
+              Tel: 123-456-7890
+            </p>
+            <p class="m-0 d-flex align-items-center gap-2">
+              <img src="/assets/mail.svg" width="15px" height="15px" alt="" />
+              medicareplus@gmail.com
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

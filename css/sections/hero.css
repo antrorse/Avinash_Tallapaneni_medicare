@@ -1,0 +1,217 @@
+.hero_section {
+  /* min-height: 80vh; */
+}
+
+.hero_section_banner {
+  background: url(/assets/hero_background.png) center center no-repeat;
+  right: -100vw;
+  background-size: contain;
+  animation: hero_slide_in 1.5s linear forwards;
+}
+
+@keyframes hero_slide_in {
+  100% {
+    right: -30vw;
+  }
+}
+
+.hero_content {
+  padding: var(--padding);
+  /* margin: auto 0 auto var(--padding); */
+  /* margin-top: 6rem; */
+  top: 10vw;
+  gap: 2vw;
+  line-height: 1.25;
+}
+
+.text_info_color_bg {
+  background-color: var(--primary-color-2);
+}
+
+.text_info_color {
+  color: var(--primary-color-1);
+  font-weight: 700;
+}
+.hero_content_motto {
+  position: relative;
+  font-size: 3.5rem;
+  transform: translateX(-120%);
+  animation: hero_content_motto_in 1.5s ease forwards;
+}
+/* .hero_content_motto::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--secondary-color-3);
+  animation: hero_content_motto_in 1.5s ease;
+} */
+
+.hero_content_motto_description {
+  font-size: 1.25rem;
+  overflow: hidden;
+}
+
+.hero_content_motto_description p {
+  animation: hero_content_motto_in_description 1.5s ease;
+}
+
+.cta {
+  overflow: hidden;
+}
+
+.cta span {
+  animation: hero_content_cta 1.5s ease;
+}
+
+@keyframes hero_content_motto_in {
+  0% {
+    /* width: 100%;
+    opacity: 1; */
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    /* width: 0%;
+    opacity: 0; */
+    transform: translateX(0%);
+  }
+}
+@keyframes hero_content_motto_in_description {
+  0% {
+    transform: translateY(120%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes hero_content_cta {
+  0% {
+    transform: translateY(120%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.hero_appointment,
+.hero_contact_us {
+  outline: 2px solid var(--primary-color-2);
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.hero_contact_us {
+  outline: 2px solid var(--primary-color-1);
+  background-color: rgba(20, 53, 82, 0.15);
+}
+
+.hero_appointment::before,
+.hero_contact_us::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 150%;
+  left: -10%;
+  top: 100%;
+  background-color: var(--primary-color-2);
+  border-radius: 50%;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+.hero_contact_us::before {
+  background-color: var(--primary-color-3);
+}
+
+.hero_contact_us:hover {
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  color: var(--secondary-color-1);
+}
+
+.hero_appointment:hover::before,
+.hero_contact_us:hover::before {
+  transform: translateY(-50%) scaleY(2.5) scaleX(1);
+}
+
+@media screen and (max-width: 1200px) {
+  .hero_content_motto {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .hero_section_banner {
+    /* height: 80vh !important; */
+  }
+  .hero_content {
+    margin-top: 2vw;
+  }
+
+  .hero_content_motto {
+    font-size: 2rem;
+  }
+  .hero_content_motto_description {
+    font-size: 1rem;
+  }
+  .cta{
+    font-size: 0.85rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  .hero_section_banner {
+    /* height: 60vh !important; */
+  }
+  .hero_content {
+    margin-top: 2vw;
+  }
+
+  .hero_content_motto {
+    font-size: 1.5rem;
+  }
+  .hero_content_motto_description {
+    font-size: 0.85rem;
+  }
+  .cta{
+    font-size: 0.65rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero_section_banner {
+    /* height: 50vh !important; */
+  }
+  /* .hero_content {
+    margin-top: 2vw;
+  } */
+
+  .hero_content_motto {
+    font-size: 1rem;
+  }
+  .hero_content_motto_description {
+    font-size: 0.65rem;
+  }
+  .hero_appointment,
+  .hero_contact_us {
+    font-size: 0.65rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .hero_section_banner {
+    height: 50vh !important;
+  }
+  /* .hero_content {
+      margin-top: 2vw;
+    } */
+
+  .hero_content_motto {
+    font-size: 1rem;
+  }
+  .hero_content_motto_description {
+    font-size: 0.65rem;
+  }
+}
